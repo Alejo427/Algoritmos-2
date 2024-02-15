@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+
+public class Leaderboard {
+    //ATRIBUTOS O VARIABLES
+	static String nombreVideojuego;
+	
+	//arreglo nombres 
+	
+	static String nombreJugadores[];
+	
+	//matriz puntajes 
+	
+	static int puntajes [][];
+	
+	// promedios 
+	
+	static float promPuntos,promHP;
+	
+	
+	// constante para el numero de jugadores 
+	  // final= un numero que no cambia 
+	static final int NUM_JUGADORES=10;
+	
+	
+	
+	
+	//METODOS
+	 // no se puede crear metodos dentro de otros metodos
+	public static void main( String[] arg) {
+		
+		perdirNomJuego();
+	}
+	
+	
+	
+	// LEER NOMBRES DE JUGADORES Y PUNTAJES 
+	
+	   // TAREA, TERMINAR METODOS***
+	
+	public static void LeerDatos() {
+		
+		for(int i=0;i<NUM_JUGADORES;i++) {
+			
+			System.out.println("INGRESE EL NOMBRE DEL JUGADOR");
+
+			// LEER CADA NOMBRE 
+			nombreJugadores[i]= Lectorconsola.next();
+		}
+		
+		// RECORRER ARREGLO 
+		
+		
+		
+		// LEER CADA NOMBRE 
+		
+		
+	
+		
+	}
+
+	// PEDIR NOMBRE DEL JUEGO 
+	public static void perdirNomJuego() {
+		
+		// se crea objeto para leer por consola
+		
+		 // Scanner= para lectura de datos
+		Scanner Lectorconsola = new Scanner(System.in);
+		//
+		System.out.println("INGRESE EL NOMBRE DEL VIDEOJUEGO");
+		//GUARDA EL 
+		nombreVideojuego = Lectorconsola.next();
+	}
+	
+	// CALCULAR PROMEDIO,, TAREA**
+	
+	public static void Calpromedio() {
+		
+	}
+	
+	// MOSTRAR PROMEDIO,, TAREA**
+	
+	public static void MosPromedio() {
+		
+	}
+}
+
