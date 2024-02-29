@@ -1,0 +1,31 @@
+// SCANNER 
+import java.util.Scanner;
+//STRING PASSWORD;
+
+//ARREGLO DINAMICO - NUEVO
+	// ArrayList<String> distintos = new ArrayList<String>
+//password = lector.next();
+
+// NUEVA FUNCION
+	// caracteres = password.split("") 
+
+
+
+public class EjercicioTparcial {
+
+	//funcion principal
+public static void main(String[] args) {
+	
+	
+	
+	String password,caracteres[];
+	
+	char[] pasword = {'f','i','z','z','b','u','z','z'};
+	
+	
+	
+	// SI LA CONTRASEÑA ES PAR ES INSEGURA
+	
+		
+	}
+}
