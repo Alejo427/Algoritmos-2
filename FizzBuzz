@@ -1,31 +1,52 @@
-// variables
+// SCANNER
+//array list
+import java.util.ArrayList;
+// NUEVA FUNCION
+	// caracteres = password.split("")
 import java.util.Scanner;
 
-public class FizzBuzz {
-    
-    public static void main(String[] args){
-            int numero;
-// Scanner se usa para leer
-        Scanner leeScanner=new Scanner(System.in);
-            System.out.println("INGRESE UN NUMERO HASTA EL 100");
-            numero=leeScanner.nextInt();
-        // i PARA GUARDAR LA VARIABLE
-        int i;
-            // for PARA EL BUCLE DE 100 NUMEROS
-        for(i=0;i<100;i++){
-                // CONDICIONAL IF ELSE
-                if(i%3 == 0 && i%5 == 0){
-                    System.out.println("FizzBuzz");
-                }
-                else if(i%3 == 0){
-                    System.out.println("Fizz");
-                }
-                else if(i%5 == 0){
-                    System.out.println("Buzz");
-                }
-                else {
-			System.out.println(i);
-               	 }
-                }   
-            }
-        }
+public class Password {
+
+	//funcion principal
+public static void main(String[] args) {
+	//
+	Scanner lectorScanner;
+	String password, caracteres[];
+	
+		lectorScanner = new Scanner(System.in);
+		System.out.println("ingrese una clave:");
+		password = lectorScanner.next();
+	//
+	ArrayList<String> distintos = new ArrayList<String>();
+	caracteres = password.split("");
+	//
+		distintos.add(caracteres[0]);
+		distintos.contains(caracteres);
+
+
+
+		/* 1. el ciclo for me recorre cada elemento de la variable "String caracter"
+
+				2.El "if" dentro del ciclo for verifica si la lista "Array" contiene
+				la variable " String caracter" y el operador "!" me niega la condicion
+				si es verdadera la condicion, entonces "distintos" no contiene el caracter.
+
+					3. El "distintos.add(caracter)" si el caracter no esta en "distintos"
+						o sea el if es verdadero se agrega el caracter a "distintos"
+						con "add"
+		*/
+		// ciclo for para recorrer el arreglo de la contraseña
+		for(String caracter : caracteres){
+			if(!distintos.contains(caracteres)){
+				distintos.add(caracteres[0]);
+			}
+		}
+		
+	// SI LA CONTRASEÑA ES PAR ES INSEGURA
+        
+		if(password%2){
+			
+		}
+		
+	}
+}
