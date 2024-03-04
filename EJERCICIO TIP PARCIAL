@@ -5,44 +5,56 @@ import java.util.ArrayList;
 	// caracteres = password.split("")
 import java.util.Scanner;
 
+//NOTA!!! AGREGAR UN CICLO PARA QUE SE PUEDA INGRESAR OTRA CONTRASEÑA!!!
 public class Password {
-
 	//funcion principal
 public static void main(String[] args) {
 	//
-	Scanner lectorScanner;
+		Scanner lectorScanner;
 	String password, caracteres[];
-	
+		//
 		lectorScanner = new Scanner(System.in);
 		System.out.println("ingrese una clave:");
 		password = lectorScanner.next();
-	//
+		//
 	ArrayList<String> distintos = new ArrayList<String>();
 	caracteres = password.split("");
-	//
+		//
 		distintos.add(caracteres[0]);
 		distintos.contains(caracteres);
-
-
-
+		//bolean devuelve un True o un False
+		boolean contPAR;
+								/*length es un metodo en el cual se guardan la cadena
+									de caracteres en la variable "password"
+								 */
+			contPAR = password.length() % 2 == 0;
 		/* 1. el ciclo for me recorre cada elemento de la variable "String caracter"
-
 				2.El "if" dentro del ciclo for verifica si la lista "Array" contiene
 				la variable " String caracter" y el operador "!" me niega la condicion
 				si es verdadera la condicion, entonces "distintos" no contiene el caracter.
-
 					3. El "distintos.add(caracter)" si el caracter no esta en "distintos"
 						o sea el if es verdadero se agrega el caracter a "distintos"
 						con "add"
 		*/
 		// ciclo for para recorrer el arreglo de la contraseña
+			/*
+			1.1el ":" itera sobre cada elemento
+			de la variable "caracteres".
+			1.2 esto quiere decir que la variable
+			"caractere" guarda un caracter unico
+			de la variable caracteres.
+			 */
 		for(String caracter : caracteres){
 			if(!distintos.contains(caracteres)){
 				distintos.add(caracteres[0]);
 			}
 		}
-		
-	// SI LA CONTRASEÑA ES PAR ES INSEGURA
-        
+		// SI LA CONTRASEÑA ES PAR ES INSEGURA
+        if(contPAR){
+			System.out.println("LA CONTRASEÑA ES INSEGURA");
+		}
+		else{
+			System.out.println("LA CONTRASEÑA ES SEGURA");
+		}
 	}
 }
