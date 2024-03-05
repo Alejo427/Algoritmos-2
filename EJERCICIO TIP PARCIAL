@@ -1,17 +1,19 @@
 // SCANNER
 //array list
-import java.util.ArrayList;
 // NUEVA FUNCION
-	// caracteres = password.split("")
+// caracteres = password.split("")
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
-//NOTA!!! AGREGAR UN CICLO PARA QUE SE PUEDA INGRESAR OTRA CONTRASEÑA!!!
 public class Password {
 	//funcion principal
 public static void main(String[] args) {
+	String respuesta = "";
 	//
-		Scanner lectorScanner;
-	String password, caracteres[];
+	do{
+		Scanner lectorScanner,lScanner;
+	String password,caracteres[];
 		//
 		lectorScanner = new Scanner(System.in);
 		System.out.println("ingrese una clave:");
@@ -41,7 +43,7 @@ public static void main(String[] args) {
 			1.1el ":" itera sobre cada elemento
 			de la variable "caracteres".
 			1.2 esto quiere decir que la variable
-			"caractere" guarda un caracter unico
+			"caracter" guarda un caracter unico
 			de la variable caracteres.
 			 */
 		for(String caracter : caracteres){
@@ -56,5 +58,10 @@ public static void main(String[] args) {
 		else{
 			System.out.println("LA CONTRASEÑA ES SEGURA");
 		}
+		System.out.println("¿DESEA INGRESAR UNA NUEVA CONTRASEÑA?");
+		lScanner = new Scanner(System.in);
+		respuesta = lScanner.next();
+		}
+		while (respuesta.equals("si"));
 	}
 }
