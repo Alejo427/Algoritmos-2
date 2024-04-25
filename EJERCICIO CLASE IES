@@ -1,0 +1,67 @@
+public class IES {
+    //Atributos
+    
+    private String nit,direccion, nombre;
+    //implementacion de la relacion entre IES y personas//
+    //personas es un arreglo dinamico (ArrayList) que guarda objetos de clase
+    
+    private ArrayList<Estudiante>Estudiante;
+    private ArrayLists<Docente>Docente;
+    
+    // metodos
+    public IES(){
+    }
+
+    public IES( String nit, Stiring direccion, String nombre){
+        
+        this.nit=nit;
+        this.direccion=direccion;
+        this.nombre=nombre;
+    }
+
+    // getters/ setters
+    public String getNit() {
+        return nit;
+    }
+
+    public void setNit(String nit) {
+        this.nit = nit;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    //agrega un nuevo estudiante a la lista estudiantes
+    //
+    public void matricularEstudiante(Estudiante NuevoEstudiante){
+        estudiantes.add(NuevoEstudiante);
+    }
+    // vincular nuevo docente
+
+    public void vincularDocente(Docente NuevoDocente){
+        docentes.add(NuevoDocente);
+    }
+
+    public int contarEstudiantesCiudad(String cualCiudad){
+        int conteo = 0;
+        return conteo;
+    }
+
+    public int contarDocentes(String cualCiudad){
+        int conteo = 0;
+        return conteo;
+    }
+}
